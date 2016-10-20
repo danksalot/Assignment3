@@ -1,2 +1,2 @@
-# VanessaAssignment3
-Assignment 3 from Vanessa
+# Assignment3
+Assignment 3
