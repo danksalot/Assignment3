@@ -14,7 +14,7 @@ int main()
         Person *person = GetPersonFromInput(i);
         if (PersonIsValid(person))
         {
-            cout << "Saved Person: " << GetPersonDetails(person) << endl;
+            cout << endl << "Saved Person: " << GetPersonDetails(person) << endl;
             cout << "Printed Lowercase: " << GetPersonDetailsLower(person) << endl;
             cout << "Printed Uppercase: " << GetPersonDetailsUpper(person) << endl << endl;
         }
