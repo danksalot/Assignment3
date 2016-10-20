@@ -26,25 +26,18 @@ string GetPersonDetails(Person * person)
 {
     return person->FirstName + " " + person->LastName + " " + person->DateOfBirth;
 }
-
 string GetPersonDetailsLower(Person * person)
 {
-    string first = person->FirstName;
-    transform(first.begin(), first.end(), first.begin(), ::tolower);
+    string details = GetPersonDetails(person);
+    transform(details.begin(), details.end(), details.begin(), ::tolower);
     
-    string last = person->LastName;
-    transform(last.begin(), last.end(), last.begin(), ::tolower);
-    
-    return first + " " + last + " " + person->DateOfBirth;
+    return details;
 }
 
 string GetPersonDetailsUpper(Person * person)
 {
-    string first = person->FirstName;
-    transform(first.begin(), first.end(), first.begin(), ::toupper);
+    string details = GetPersonDetails(person);
+    transform(details.begin(), details.end(), details.begin(), ::toupper);
     
-    string last = person->LastName;
-    transform(last.begin(), last.end(), last.begin(), ::toupper);
-    
-    return first + " " + last + " " + person->DateOfBirth;
+    return details;
 }
