@@ -15,8 +15,8 @@ int main()
         if (PersonIsValid(person))
         {
             cout << "Saved Person: " << GetPersonDetails(person) << endl;
-            cout << "Saved Person: " << GetPersonDetailsLower(person) << endl;
-            cout << "Saved Person: " << GetPersonDetailsUpper(person) << endl << endl;
+            cout << "Printed Lowercase: " << GetPersonDetailsLower(person) << endl;
+            cout << "Printed Uppercase: " << GetPersonDetailsUpper(person) << endl << endl;
         }
         else
         {
