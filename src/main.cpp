@@ -4,15 +4,27 @@
 
 using namespace std;
 
+void GetInputFromUser(int, Person *);
+void PrintResults(int, Person *);
+
 int main()
 {
-    StringManipulator *strMan = new StringManipulator();
     int NumberOfEntries = 0;
+    
     cout << "How many entries are there? " << endl; 
     cin >> NumberOfEntries;
     
     Person people [NumberOfEntries];
     
+    GetInputFromUser(NumberOfEntries, people);
+    
+    PrintResults(NumberOfEntries, people);
+
+    return 0;
+}
+
+void GetInputFromUser(int NumberOfEntries, Person *people)
+{
     for (int i = 1; i <= NumberOfEntries; i++)
     {
         Person *person = GetPersonFromInput(i);
@@ -27,6 +39,11 @@ int main()
             i--;
         }
     }
+}
+
+void PrintResults(int NumberOfEntries, Person *people)
+{
+    StringManipulator *strMan = new StringManipulator();
     
     cout << "Saved People:" << endl;
     for (int i = 0; i < NumberOfEntries; i++)
@@ -44,7 +61,5 @@ int main()
     for (int i = 0; i < NumberOfEntries; i++)
     {
         cout << strMan->ConvertToUpper(people[i].GetDetails()) << endl;
-    }
-
-    return 0;
+    }   
 }
