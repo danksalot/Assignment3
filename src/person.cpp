@@ -1,6 +1,5 @@
 #include <iostream>
-#include <algorithm>
-#include "functions.h"
+#include "person.h"
 
 using namespace std;
 
@@ -12,18 +11,6 @@ bool Person::IsValid()
 string Person::GetDetails()
 {
     return FirstName + " " + LastName + " " + DateOfBirth;
-}
-
-string StringManipulator::ConvertToUpper(string input)
-{
-    transform(input.begin(), input.end(), input.begin(), ::toupper);
-    return input;
-}
-
-string StringManipulator::ConvertToLower(string input)
-{
-    transform(input.begin(), input.end(), input.begin(), ::tolower);
-    return input;
 }
 
 Person * GetPersonFromInput(int personId)
