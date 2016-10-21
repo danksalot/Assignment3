@@ -1,11 +1,14 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 
-struct Person
+class Person
 {
     std::string FirstName;
     std::string LastName;
     std::string DateOfBirth;
+    
+    bool IsValid();
+    bool GetDetails();
 };
 
 Person * GetPersonFromInput(int personId);
