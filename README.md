@@ -4,15 +4,15 @@
 The solution is built in C++, and has these classes:
 
 Person
-  Contains FirstName, LastName, and DateOfBirth
-  Has a method to check validity
-    FirstName and LastName are less than 10 characters
-    DateOfBirth is exactly 10 characters
-  Has a method to Display Details
+* Contains FirstName, LastName, and DateOfBirth
+* Has a method to Display Details
+* Has a method to check validity
+  * FirstName and LastName are less than 10 characters
+  * DateOfBirth is exactly 10 characters
 
 StringManipulator
-  Has a method to return a lower-case version of the input string
-  Has a method to return an upper-case version of the input string
+* Has a method to return a lower-case version of the input string
+* Has a method to return an upper-case version of the input string
   
 The program asks for input, repeating a step if the input for that step is invalid.
 
