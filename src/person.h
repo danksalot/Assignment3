@@ -12,13 +12,6 @@ class Person
     std::string GetDetails();
 };
 
-class StringManipulator
-{
-    public:
-    std::string ConvertToUpper(std::string input);
-    std::string ConvertToLower(std::string input);
-};
-
 Person * GetPersonFromInput(int personId);
 
 #endif
