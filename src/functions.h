@@ -3,18 +3,22 @@
 
 class Person
 {
+    public:
     std::string FirstName;
     std::string LastName;
     std::string DateOfBirth;
     
     bool IsValid();
-    bool GetDetails();
+    std::string GetDetails();
+};
+
+class StringManipulator
+{
+    public:
+    std::string ConvertToUpper(std::string input);
+    std::string ConvertToLower(std::string input);
 };
 
 Person * GetPersonFromInput(int personId);
-bool PersonIsValid(Person * person);
-std::string GetPersonDetails(Person * person);
-std::string GetPersonDetailsLower(Person * person);
-std::string GetPersonDetailsUpper(Person * person);
 
 #endif
