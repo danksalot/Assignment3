@@ -4,6 +4,28 @@
 
 using namespace std;
 
+bool Person::IsValid()
+{
+    return FirstName.size() < 10 && LastName.size() < 10 && DateOfBirth.size() == 10;
+}
+
+string Person::GetDetails()
+{
+    return FirstName + " " + LastName + " " + DateOfBirth;
+}
+
+string StringManipulator::ConvertToUpper(string input)
+{
+    transform(input.begin(), input.end(), input.begin(), ::toupper);
+    return input;
+}
+
+string StringManipulator::ConvertToLower(string input)
+{
+    transform(input.begin(), input.end(), input.begin(), ::tolower);
+    return input;
+}
+
 Person * GetPersonFromInput(int personId)
 {
     Person *person = new Person();
@@ -15,29 +37,4 @@ Person * GetPersonFromInput(int personId)
     cin >> person->DateOfBirth;
     
     return person;
-}
-
-bool PersonIsValid(Person * person)
-{
-    return person->FirstName.size() < 10 && person->LastName.size() < 10 && person->DateOfBirth.size() == 10;
-}
-
-string GetPersonDetails(Person * person)
-{
-    return person->FirstName + " " + person->LastName + " " + person->DateOfBirth;
-}
-string GetPersonDetailsLower(Person * person)
-{
-    string details = GetPersonDetails(person);
-    transform(details.begin(), details.end(), details.begin(), ::tolower);
-    
-    return details;
-}
-
-string GetPersonDetailsUpper(Person * person)
-{
-    string details = GetPersonDetails(person);
-    transform(details.begin(), details.end(), details.begin(), ::toupper);
-    
-    return details;
 }
