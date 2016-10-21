@@ -1,6 +1,6 @@
 #include <iostream>
 #include <algorithm>
-#include "functions.h"
+#include "stringManipulator.h"
 
 using namespace std;
 
