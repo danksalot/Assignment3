@@ -5,6 +5,7 @@ using namespace std;
 
 int main()
 {
+    StringManipulator *strMan = new StringManipulator();
     int NumberOfEntries = 0;
     cout << "How many entries are there? " << endl; 
     cin >> NumberOfEntries;
@@ -14,10 +15,10 @@ int main()
     for (int i = 1; i <= NumberOfEntries; i++)
     {
         Person *person = GetPersonFromInput(i);
-        if (PersonIsValid(person))
+        if (person->IsValid())
         {
             people[i-1] = *person;
-            cout << "Saved Person: " << GetPersonDetails(person) << endl << endl;
+            cout << "Saved Person: " << person->GetDetails() << endl << endl;
         }
         else
         {
@@ -29,19 +30,19 @@ int main()
     cout << "Saved People:" << endl;
     for (int i = 0; i < NumberOfEntries; i++)
     {
-        cout << GetPersonDetails(&people[i]) << endl;
+        cout << people[i].GetDetails() << endl;
     }
     
     cout << endl << "Printed all lowercase:" << endl;
     for (int i = 0; i < NumberOfEntries; i++)
     {
-        cout << GetPersonDetailsLower(&people[i]) << endl;
+        cout << strMan->ConvertToLower(people[i].GetDetails()) << endl;
     }
     
     cout << endl << "Printed all uppercase:" << endl;
     for (int i = 0; i < NumberOfEntries; i++)
     {
-        cout << GetPersonDetailsUpper(&people[i]) << endl;
+        cout << strMan->ConvertToUpper(people[i].GetDetails()) << endl;
     }
 
     return 0;
