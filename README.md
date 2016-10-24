@@ -1,5 +1,14 @@
 # Assignment 3
-*This is where the text of the assignment will go.*
+Create a program in which you 
+ 1. Create a structure having 3 members all of string data type. The members are firstName, lastName, and DOB. These members store the information of first name, last name and date of birth as provided by the user.
+ 2. Ask the user the number of persons he wants to use this program to store the information.
+ 3. Create an array of structure (declared in 1) to store the information of number of persons declared in 2.
+ 4. Write a function in which you ask the user to input the first name, the last name and the DOB for all the persons one by one and store that information in structure declared in 3. Check the first name and the last name are not longer than 10 characters and DOB is exactly 10 digits. Declared the function in a header file (like source.h), definition in  cpp file (like source.cpp) and call in main.cpp file (which has your main function).
+ 5. Write a function in which all the stored information (in 4) is displayed. Again declare the function in .h file, define in .cpp file and call in main.cpp file.
+ 6. Write a function which converts all lower case letters in upper case letters in first and last name. Display the contents of the array of structure after conversion. Again declare the function in .h file, define in .cpp file and call in main.cpp file.
+ 7. Write a function which displays the upper case full name (first name + last name) in sorted orders. Again declare the function in .h file, define in .cpp file and call in main.cpp file. 
+
+You may need to include algorithm.h file (for sort()), iomanip.h file for setw(), cstring.h for string functions. This project test your understanding of array, string, and functions.
 
 The solution is built in C++, and has these classes:
 
