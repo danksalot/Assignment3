@@ -10,6 +10,8 @@ Create a program in which you
 
 You may need to include algorithm.h file (for sort()), iomanip.h file for setw(), cstring.h for string functions. This project test your understanding of array, string, and functions.
 
+# Solution
+
 The solution is built in C++, and has these classes:
 
 Person
