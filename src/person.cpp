@@ -8,6 +8,11 @@ bool Person::IsValid()
     return FirstName.size() < 10 && LastName.size() < 10 && DateOfBirth.size() == 10;
 }
 
+bool Sort(Person a, Person b)
+{
+    return a < b;
+}
+
 string Person::GetDetails()
 {
     return FirstName + " " + LastName + " " + DateOfBirth;
