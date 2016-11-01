@@ -10,6 +10,8 @@ class Person
     
     bool IsValid();
     std::string GetDetails();
+    bool operator<(const Person& p) { return this->LastName < p.LastName || (this->LastName == p.LastName && this->FirstName < p.FirstName); }
+    bool Sort(Person, Person);
 };
 
 Person * GetPersonFromInput(int personId);
