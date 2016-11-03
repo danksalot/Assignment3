@@ -18,6 +18,11 @@ string Person::GetDetails()
     return FirstName + " " + LastName + " " + DateOfBirth;
 }
 
+string Person::GetName()
+{
+    return FirstName + " " + LastName;
+}
+
 Person * GetPersonFromInput(int personId)
 {
     Person *person = new Person();
