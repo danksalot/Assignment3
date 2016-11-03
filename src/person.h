@@ -7,6 +7,7 @@ class Person
     std::string FirstName;
     std::string LastName;
     std::string DateOfBirth;
+    std::string GetName;
     
     bool IsValid();
     std::string GetDetails();
