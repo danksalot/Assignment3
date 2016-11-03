@@ -57,9 +57,10 @@ void PrintResults(int NumberOfEntries, Person *people)
         cout << strMan->ConvertToLower(people[i].GetDetails()) << endl;
     }
     
-    cout << endl << "Printed all uppercase:" << endl;
+    cout << endl << "Printed all uppercase, sorted alphabetically:" << endl;
+    // TODO: Sort the names
     for (int i = 0; i < NumberOfEntries; i++)
     {
-        cout << strMan->ConvertToUpper(people[i].GetDetails()) << endl;
+        cout << strMan->ConvertToUpper(people[i].GetName()) << endl;
     }   
 }
