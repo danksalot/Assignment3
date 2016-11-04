@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 #include "person.h"
 #include "stringManipulator.h"
 
@@ -6,6 +7,12 @@ using namespace std;
 
 void GetInputFromUser(int, Person *);
 void PrintResults(int, Person *);
+
+bool Sort(const Person &left, const Person &right)
+{
+	return left.LastName < right.LastName || 
+	    (left.LastName == right.LastName && left.FirstName < right.FirstName);
+}
 
 int main()
 {
@@ -58,7 +65,7 @@ void PrintResults(int NumberOfEntries, Person *people)
     }
     
     cout << endl << "Printed all uppercase, sorted alphabetically:" << endl;
-    // TODO: Sort the names
+    sort(people, people + NumberOfEntries, Sort);
     for (int i = 0; i < NumberOfEntries; i++)
     {
         cout << strMan->ConvertToUpper(people[i].GetName()) << endl;
