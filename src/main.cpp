@@ -59,7 +59,7 @@ void PrintResults(int NumberOfEntries, Person *people)
     }
     
     cout << endl << "Printed all uppercase, sorted alphabetically:" << endl;
-    sort(people, people + NumberOfEntries, less<Person>());
+    sort(people, people + NumberOfEntries);
     for (int i = 0; i < NumberOfEntries; i++)
     {
         cout << strMan->ConvertToUpper(people[i].GetName()) << endl;
