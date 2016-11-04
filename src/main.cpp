@@ -8,12 +8,6 @@ using namespace std;
 void GetInputFromUser(int, Person *);
 void PrintResults(int, Person *);
 
-bool Sort(const Person &left, const Person &right)
-{
-	return left.LastName < right.LastName || 
-	    (left.LastName == right.LastName && left.FirstName < right.FirstName);
-}
-
 int main()
 {
     int NumberOfEntries = 0;
@@ -65,7 +59,7 @@ void PrintResults(int NumberOfEntries, Person *people)
     }
     
     cout << endl << "Printed all uppercase, sorted alphabetically:" << endl;
-    sort(people, people + NumberOfEntries, Sort);
+    sort(people, people + NumberOfEntries, less<Person>());
     for (int i = 0; i < NumberOfEntries; i++)
     {
         cout << strMan->ConvertToUpper(people[i].GetName()) << endl;
