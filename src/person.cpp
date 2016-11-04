@@ -30,7 +30,7 @@ Person * GetPersonFromInput(int personId)
     cin >> person->FirstName;
     cout << "Enter the last name of Person " << personId << " ";
     cin >> person->LastName;
-    cout << "Enter the first name of Person " << personId << " ";
+    cout << "Enter the birthdate of Person " << personId << " ";
     cin >> person->DateOfBirth;
     
     return person;
