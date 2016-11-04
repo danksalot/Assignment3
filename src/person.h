@@ -11,7 +11,7 @@ class Person
     bool IsValid();
     std::string GetName();
     std::string GetDetails();
-    friend bool operator<(const Person& l, const Person& r);
+    friend bool operator<(const Person&, const Person&);
 };
 
 Person * GetPersonFromInput(int personId);
