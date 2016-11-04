@@ -1,5 +1,5 @@
-#ifndef FUNCTIONS_H
-#define FUNCTIONS_H
+#ifndef PERSON_H
+#define PERSON_H
 
 class Person
 {
