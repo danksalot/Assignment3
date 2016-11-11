@@ -20,6 +20,8 @@ int main()
     GetInputFromUser(NumberOfEntries, people);
     
     PrintResults(NumberOfEntries, people);
+    
+    delete[] people;
 
     return 0;
 }
