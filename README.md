@@ -1,4 +1,7 @@
-# Assignment 3
+# Person Database
+
+# Assignment:
+
 Create a program in which you 
  1. Create a structure having 3 members all of string data type. The members are firstName, lastName, and DOB. These members store the information of first name, last name and date of birth as provided by the user.
  2. Ask the user the number of persons he wants to use this program to store the information.
